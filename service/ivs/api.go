@@ -4751,6 +4751,8 @@ type UpdateChannelInput struct {
 	//
 	// Default: STANDARD.
 	Type *string `locationName:"type" type:"string" enum:"ChannelType"`
+
+	RecordingS3BucketName *string `locationName:"recordingS3BucketName" type:"string"`
 }
 
 // String returns the string representation
@@ -4806,6 +4808,12 @@ func (s *UpdateChannelInput) SetName(v string) *UpdateChannelInput {
 // SetType sets the Type field's value.
 func (s *UpdateChannelInput) SetType(v string) *UpdateChannelInput {
 	s.Type = &v
+	return s
+}
+
+// RecordingS3BucketName sets the RecordingS3BucketName field's value.
+func (s *UpdateChannelInput) SetRecordingS3BucketName(v string) *UpdateChannelInput {
+	s.RecordingS3BucketName = &v
 	return s
 }
 
